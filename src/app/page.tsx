@@ -19,9 +19,10 @@ export default function Home() {
     aiChatSettings: {
       graphUrl: "http://localhost:3003/api/chat",
       headers: {
-        tz: "US/Pacific",
+        tz: "US/Pacific", // TODO: Add timezone if different from US/Pacific.
+        // You can find a timezone list here: https://github.com/davidayalas/current-time?tab=readme-ov-file
       },
-      apiKey: "sk_kKSyiGiD0F8x.bO9Ts0OpY5BWZdw_XV1lf44aDDwmSakncrBKjeVu-pg",
+      apiKey: "", // TODO: Add API key
       components: {
         "Temperature data": TemperatureList,
       },
@@ -40,10 +41,7 @@ export default function Home() {
               Ask me anything about weather data and temperature forecasts
             </p>
           </div>
-          
-          {/* <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"> */}
-            <InkeepEmbeddedChat {...embeddedChatProps} />
-          {/* </div> */}
+          <InkeepEmbeddedChat {...embeddedChatProps} />
         </div>
       </div>
     </div>
